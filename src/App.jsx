@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "dashboard",
+    path: "/dashboard",
     element: <ProtectedRoute />,
     loader: userLoaders.checkAuth,
     children: [
