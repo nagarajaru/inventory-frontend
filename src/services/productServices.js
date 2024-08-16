@@ -13,7 +13,7 @@ const productServices = {
         });
     },
     viewProducts: async () => {
-        return await protectedInstance.get('/products');
+        return await protectedInstance.get('https://management-1-8wua.onrender.com/products');
     }
 }
 
