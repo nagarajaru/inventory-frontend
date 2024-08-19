@@ -59,7 +59,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "admin",
+    path: "/admin",
     element: <ProtectedRoute />,
     loader: userLoaders.checkAuth,
     children: [
@@ -74,7 +74,7 @@ const router = createBrowserRouter([
             loader: userLoaders.getUser,
             children: [
               {
-                path: "products",
+                path: "/products",
                 element: <CreateProduct />
               }
             ]
