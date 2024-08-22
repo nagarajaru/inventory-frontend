@@ -14,7 +14,7 @@ const userServices = {
     // login a user
     login: async (email, password) => {
         // make a POST request to the server
-        return await instance.post('https://management-1-8wua.onrender.com/api/v1/users/login', {
+        return await instance.post('http://localhost:3001/api/v1/users/login', {
             email,
             password
         }, {
@@ -24,13 +24,10 @@ const userServices = {
     // get the user
     getUser: async () => {
         // make a GET request to the server
-        return await protectedInstance.get('https://management-1-8wua.onrender.com/api/v1/users/profile');
-    },
-    checkAuth: async () => {
-        return await protectedInstance.get('https://management-1-8wua.onrender.com/api/v1/users/checkAuth');
+        return await protectedInstance.get('http://localhost:3001/api/v1/users/profile');
     },
     logout: async () => {
-        return await protectedInstance.get('https://management-1-8wua.onrender.com/api/v1/users/logout');
+        return await protectedInstance.get('http://localhost:3001/api/v1/users/logout');
     }
 }
 
