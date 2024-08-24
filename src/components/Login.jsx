@@ -22,7 +22,7 @@ const Login = () => {
                 setPassword('');
 
                 // redirect to dashboard or AdminDashboard
-                if(response.data.user.role === 'admin') {
+                if(response.user.role === 'admin') {
                     navigate('/admin');
                 } else {
                     navigate('/dashboard');
