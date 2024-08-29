@@ -59,7 +59,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "admin",
+    path: "/admin",
     element: <ProtectedRoute />,
     loader: userLoaders.checkAuth,
     children: [
