@@ -29,7 +29,8 @@ const Login = () => {
                 }
             })
             .catch(error => {
-                alert(error.response.message);
+                alert("Unable to Proceed!"); // Shows an alert with the message
+
             })
     }
 
