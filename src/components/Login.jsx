@@ -20,7 +20,7 @@ const Login = () => {
                 // clear the form
                 setEmail('');
                 setPassword('');
-
+                console.log(response.data.user.role)
                 // redirect to dashboard or AdminDashboard
                 if(response.data.user.role === 'admin') {
                     navigate('/admin');
