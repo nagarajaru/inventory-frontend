@@ -26,6 +26,9 @@ const userServices = {
         // make a GET request to the server
         return await protectedInstance.get('https://management-1-8wua.onrender.com/api/v1/users/profile');
     },
+    checkAuth: async () => {
+        return await protectedInstance.get('https://management-1-8wua.onrender.com/api/v1/users/checkAuth');
+    },
     logout: async () => {
         return await protectedInstance.get('https://management-1-8wua.onrender.com/api/v1/users/logout');
     }

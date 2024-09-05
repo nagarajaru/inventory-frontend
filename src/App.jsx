@@ -40,12 +40,12 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/dashboard",
+    path: "dashboard",
     element: <ProtectedRoute />,
     loader: userLoaders.checkAuth,
     children: [
       {
-        path: "/",
+        path: "",
         element: <DashboardWrapper />,
         loader: userLoaders.getUser,
         children: [
@@ -58,18 +58,18 @@ const router = createBrowserRouter([
       }
     ]
   },
- // {
-   // path: "/admin",
-    //element: <ProtectedRoute />,
-    //loader: userLoaders.checkAuth,
-    //children: [
-     // {
-       // path: "",
-        //element: <AdminRoute />,
-        //loader: userLoaders.getUser,
-        //children: [
+  {
+    path: "admin",
+    element: <ProtectedRoute />,
+    loader: userLoaders.checkAuth,
+    children: [
+      {
+        path: "",
+        element: <AdminRoute />,
+        loader: userLoaders.getUser,
+        children: [
           {
-            path: "/admin",
+            path: "",
             element: <AdminDashboardWrapper />,
             loader: userLoaders.getUser,
             children: [
@@ -79,8 +79,12 @@ const router = createBrowserRouter([
               }
             ]
           }
-        ]);
-      
+        ]
+      }
+    ]
+  }
+])
+
 const App = () => {
   return <RouterProvider router={router} />
 }

@@ -20,17 +20,16 @@ const Login = () => {
                 // clear the form
                 setEmail('');
                 setPassword('');
-                console.log(response.user)
+
                 // redirect to dashboard or AdminDashboard
-                if(response.user=== 'admin') {
+                if(response.data.user.role === 'admin') {
                     navigate('/admin');
                 } else {
                     navigate('/dashboard');
                 }
             })
             .catch(error => {
-                alert("Unable to Proceed!"); // Shows an alert with the message
-
+                alert(error.response.data.message);
             })
     }
 
@@ -68,4 +67,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Login
