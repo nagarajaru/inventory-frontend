@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         loader: userLoaders.getUser,
         children: [
           {
-            path: "/products",
+            path: "products",
             element: <ViewProducts />,
             loader: productLoaders.viewProducts
           }
