@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // define the base url for the API
-const baseURL = "https://management-1-8wua.onrender.com/http://localhost:3001/api/v1/";
+const baseURL = "https://management-1-8wua.onrender.com/api/v1";
 
 const instance = axios.create({
     baseURL,
