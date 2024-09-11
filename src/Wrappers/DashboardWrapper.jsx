@@ -15,7 +15,7 @@ const DashboardWrapper = () => {
         alert('logout successful');
 
         // redirect to login page
-        navigate('login');
+        navigate('/login');
       })
       .catch(error => {
         alert(error.response.data.message);
